@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href ="/styles/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="h-element"><%= place.name %></div>
+        <div class="h-element"><%= temp %> C</div>
+    </div>
+    <div class = "container">
+        <img id = "image" src="./shiny.jpg"  >
+        <div class="bottom-left"><%= des %></div>
+        <div class="bottom-right"><%= temp %> C</div>
+    </div>
+    <div class="form">
+        <form id="PostForm" method="post" action="/find_weather">
+            <input type="text" name="city" placeholder="City" required>
+            <input type="text" name="state" placeholder="State" required>
+            <button class="full-width" type="submit">
+              search 
+            </button>
+        </form>
+    </div >
+    <div id ="bottom-2-ctn">
+        <div class="box temp">
+            <img src="./icons/temprature.png" height="50%">
+            <p>Temprature<br>
+                <%= temp%> Celcius
+            </p>
+
+        </div>
+        <div class="box temp_min">
+            <img src="./icons/min-temp.png" height="50%">
+            <p>Temprature-min<br>
+                <%= min_temp %> Celcius
+            </p>
+        </div>
+        <div class="box temp_max">
+            <img src="./icons/max-temp.png" height="50%">
+            <p>Temprature-max<br>
+                <%= max_temp %> Celcius
+            </p>
+        </div>
+        <div class="box pressure">
+            <img src="./icons/air-pressure.png" height="50%">
+            <p>Air Pressure<br>
+                <%= place.main.pressure %> hPa
+            </p>
+        </div>
+        <div class="box humid">
+            <img src="./icons/humid.png" height="50%">
+            <p>Humidity<br>
+                <%= place.main.humidity %> %
+            </p>
+        </div>
+        <div class="box visible">
+            <img src="./icons/visible.png" height="50%">
+            <p>Visibility<br>
+                <%= place.visibility %> Meter
+            </p>
+        </div>
+        <div class="box windspeed">
+            <img src="./icons/wind-speed.png" height="50%">
+            <p>wind-speed<br>
+                <%= wind_speed %> m/sec
+            </p>
+        </div>
+        <div class="box cloud">
+            <img src="./icons/clouds.png" height="50%">
+            <p>Clouds<br>
+                <%= cloud %>
+            </p>
+        </div>
+        <div class="box sunrise">
+            <img src="./icons/sunrise.png" height="50%">
+            <p>Time<br>
+                <%= sun_rh %>:<%= sun_rm%>
+            </p>
+        </div>
+        <div class="box sunset">
+            <img src="./icons/sunset.png" height="50%">
+            <p>Time<br>
+                <%= sun_sh %>:<%= sun_sm%>
+            </p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
