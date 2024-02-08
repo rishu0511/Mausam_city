@@ -28,6 +28,11 @@ app.get("/" , async(req,res)=>{
               latitude = user_loc.lat;
               longitude=user_loc.lon
 
+            }else{
+              var user_loc= location[0];
+              
+              latitude = user_loc.lat;
+              longitude=user_loc.lon
             }
           }
         const weather = await axios(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_key}`);
@@ -58,23 +63,21 @@ app.get("/" , async(req,res)=>{
         const temp_max=weather_data.main.temp_max-273;
         const temp_min=weather_data.main.temp_min-273;
         const descript = weather_data.weather[0];
-        let photo ="shiny/shiny_1"
+        let photo ="icons/poster.png"
         if(descript.main==="Fog" ){
-          const fog=["fog_1","fog_2","fog_3","fog_4"];
-          const random_fog=fog[Math.floor(Math.random()*4)]
-          photo="fog/" + random_fog;
+          photo="icons/humid.png";
         }else if(descript.main==="Smoke" ){
-          const fog_s=["fog_1","fog_2","fog_3","fog_4"];
-          const random_S=fog_s[Math.floor(Math.random()*4)]
-          photo="fog/" + random_S;
+          photo="icons/humid.png";
         }else if(descript.main==="Clouds"){
-          const cloud=["cloudy_1","cloudy_2"];
-          const random=cloud[Math.floor(Math.random()*2)]
-          photo="cloudy/" + random;
-        } else if(descript.main==="Mist"){
-          photo="shiny/mist"
+          photo="icons/clouds.png";
+        } else if(descript.main==="Rain"){
+            photo="icons/smoke.png"
+        }else if(descript.main==="Snow"){
+          photo="icons/snow.png"
+        } else if(descript.main==="Haze"){
+          photo="icons/humid.png"
         }else{
-          photo="shiny/shiny_1"
+          photo="icons/poster.png"
         }
         res.render("index.ejs",{
           des:descript.main,
@@ -125,23 +128,21 @@ app.get("/new",async(req,res)=>{
         const temp_max=weather_data.main.temp_max-273;
         const temp_min=weather_data.main.temp_min-273;
         const descript = weather_data.weather[0];
-        let photo = "shiny/shiny_1"
+        let photo ="icons/poster.png"
         if(descript.main==="Fog" ){
-          const fog=["fog_1","fog_2","fog_3","fog_4"];
-          const random_fog=fog[Math.floor(Math.random()*4)]
-          photo="fog/" + random_fog;
+          photo="icons/humid.png";
         }else if(descript.main==="Smoke" ){
-          const fog_s=["fog_1","fog_2","fog_3","fog_4"];
-          const random_S=fog_s[Math.floor(Math.random()*4)]
-          photo="fog/" + random_S;
+          photo="icons/humid.png";
         }else if(descript.main==="Clouds"){
-          const cloud=["cloudy_1","cloudy_2"];
-          const random=cloud[Math.floor(Math.random()*2)]
-          photo="cloudy/" + random;
-        } else if(descript.main==="Mist"){
-          photo="shiny/mist"
+          photo="icons/clouds.png";
+        } else if(descript.main==="Rain"){
+            photo="icons/smoke.png"
+        }else if(descript.main==="Snow"){
+          photo="icons/snow.png"
+        } else if(descript.main==="Haze"){
+          photo="icons/humid.png"
         }else{
-          photo="shiny/shiny_1"
+          photo="icons/poster.png"
         }
         res.render("modify.ejs",{
           des:descript.main,

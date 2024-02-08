@@ -14,8 +14,8 @@ a {
   font-family: "Arial", sans-serif;
 }
 .header {
-    position: fixed;
-    top:0;
+    position: relative;
+    top: 0;
     left:0;
     background-color: #FFF2D8;
     display:flex;
