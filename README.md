@@ -6,10 +6,10 @@ FRONT PAGES =>
 
 How to clone =>
   first {git init}
-  Then { git clone url} copy url from (<>code)
-  Then cd over repository {cd Mausam_city}
-  Then initialize all node module {npm init}
-  Then run nodemon {nodemon index.js}
+  then { git clone url} copy url from (<>code)
+  then cd over repository {cd Mausam_city}
+  then initialize all node module {npm init}
+  then run nodemon {nodemon index.js}
 Inside website =>
   State name is only required for india otherwise you will fill {non}
   Thats optional
