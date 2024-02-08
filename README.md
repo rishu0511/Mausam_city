@@ -4,7 +4,7 @@
 ![Screenshot (29)](https://github.com/rishu0511/Mausam_city/assets/154498380/66344d44-5753-4430-9ee6-a179aa3030f8)
 ## How to clone =>
   ### first {git init}
-  ### then { git clone url} copy url from (<>code)
+  ### then { git clone https://github.com/rishu0511/Mausam_city.git} 
   ### then cd over repository {cd Mausam_city}
   ### then initialize all node module {npm init}
   ### then run nodemon {nodemon index.js}
