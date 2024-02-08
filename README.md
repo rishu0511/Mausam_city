@@ -1,4 +1,4 @@
-# Find weaather of any city in the world 
+# Find weather of any city in the world 
 ## FRONT PAGES =>
 ![Screenshot (32)](https://github.com/rishu0511/Mausam_city/assets/154498380/9c707ccb-fe7f-4e95-9ead-802aae1f6b5e)
 ![Screenshot (29)](https://github.com/rishu0511/Mausam_city/assets/154498380/66344d44-5753-4430-9ee6-a179aa3030f8)
